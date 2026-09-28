@@ -1,0 +1,339 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS & RESET BÁSICO
+   ========================================================================== */
+html {
+    scroll-behavior: smooth; /* Rolagem suave para os links internos */
+}
+
+body {
+    background-color: #f8a100; /* Fundo laranja */
+    color: #000000;             /* Cor do texto principal */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 850px;           /* Largura limite para leitura confortável */
+    margin: 0 auto;             /* Centraliza a página */
+    padding: 20px;
+}
+
+/* ==========================================================================
+   2. TIPIFICAÇÃO & TÍTULOS
+   ========================================================================== */
+h1 {
+    color: #299b42;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+h2 {
+    color: #2090c4a9;
+    font-size: 24px;
+    border-bottom: 2px solid #5bac1c7f; /* Linha de destaque abaixo do título */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #2980B9;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+a {
+    color: #3498DB;
+    text-decoration: none;
+}
+
+/* Destaques */
+.destaque {
+    font-weight: bold;
+    color: #000000;
+}
+
+.destaque-texto {
+    color: #E74C3C;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO & FOTO DE PERFIL
+   ========================================================================== */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;         /* Torna a foto circular */
+    border: 4px solid #3498DB;  /* Borda colorida */
+    object-fit: cover;         /* Ajusta a imagem sem distorcer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.acoes-header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   4. MENU DE NAVEGAÇÃO (<nav>)
+   ========================================================================== */
+nav {
+    background-color: #d0ff00;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+nav a {
+    color: #FFFFFF;
+    margin: 0 8px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #34495E;
+    color: #F1C40F;
+}
+
+/* ==========================================================================
+   5. PADRÃO VISUAL DE CARDS (BOX MODEL)
+   ========================================================================== */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 25px;            /* Espaçamento interno (Padding) */
+    margin-bottom: 25px;      /* Espaçamento externo (Margin) */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Sombra leve */
+}
+
+/* Card especial para dicas/aside */
+.dica-box {
+    background-color: #FEF9E7;
+    border-left: 5px solid #F1C40F;
+}
+
+/* ==========================================================================
+   6. ESTILIZAÇÃO COMPLETA DE BOTÕES (REUTILIZÁVEIS)
+   ========================================================================== */
+/* Estilo Base para todos os Botões */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Efeito ao clicar no botão */
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+/* Botão Principal (Azul) */
+.btn-principal {
+    background-color: #3498DB;
+    color: #FFFFFF;
+}
+
+.btn-principal:hover {
+    background-color: #2980B9;
+    color: #FFFFFF;
+}
+
+/* Botão Secundário (Cinza) */
+.btn-secundario {
+    background-color: #95A5A6;
+    color: #FFFFFF;
+}
+
+.btn-secundario:hover {
+    background-color: #7F8C8D;
+}
+
+/* Botão Estilo Contorno (Outline) */
+.btn-outline {
+    background-color: transparent;
+    color: #2C3E50;
+    border: 2px solid #2C3E50;
+}
+
+.btn-outline:hover {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+}
+
+/* Botões de Redes Sociais */
+.grid-botoes-redes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.btn-social {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    color: #FFFFFF;
+}
+
+.btn-github {
+    background-color: #24292E;
+}
+
+.btn-github:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.btn-linkedin {
+    background-color: #0A66C2;
+}
+
+.btn-linkedin:hover {
+    background-color: #084E96;
+    color: #FFFFFF;
+}
+
+.btn-email {
+    background-color: #E74C3C;
+}
+
+.btn-email:hover {
+    background-color: #C0392B;
+    color: #FFFFFF;
+}
+
+/* Botão "Voltar ao topo" */
+.btn-topo {
+    background-color: #E0E0E0;
+    color: #333333;
+    font-size: 13px;
+    padding: 6px 14px;
+    margin-top: 10px;
+}
+
+.btn-topo:hover {
+    background-color: #BDC3C7;
+}
+
+/* ==========================================================================
+   7. GALERIA DE IMAGENS DOS HOBBIES
+   ========================================================================== */
+.galeria-hobbies {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.img-hobby {
+    width: 150px;
+    height: 110px;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+.img-hobby:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   8. TABELA ESTILIZADA
+   ========================================================================== */
+.tabela-conhecimentos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabela-conhecimentos th, 
+.tabela-conhecimentos td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+}
+
+.tabela-conhecimentos th {
+    background-color: #34495E;
+    color: #FFFFFF;
+}
+
+.tabela-conhecimentos tr:hover {
+    background-color: #F2F2F2;
+}
+
+/* ==========================================================================
+   9. FORMULÁRIO DE CONTATO & AGRUPAMENTO DE BOTÕES
+   ========================================================================== */
+.campo-grupo {
+    margin-bottom: 15px;
+}
+
+.campo-grupo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.campo-grupo input, 
+.campo-grupo select, 
+.campo-grupo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.campo-grupo input:focus, 
+.campo-grupo select:focus, 
+.campo-grupo textarea:focus {
+    border-color: #3498DB;
+    outline: none;
+}
+
+.acoes-formulario {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ==========================================================================
+   10. RODAPÉ
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #E0E0E0;
+    font-size: 14px;
+    color: #7F8C8D;
+}
